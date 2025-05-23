@@ -40,25 +40,6 @@
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <30 31>;
         };
-
-        hd_comp {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <11>;
-            layers = <0>;
-            timeout-ms = <3>;
-        };
-
-        f11_comb {
-            bindings = <&kp F11>;
-            key-positions = <14 15>;
-            layers = <2>;
-        };
-
-        f12_comb {
-            bindings = <&kp F12>;
-            key-positions = <15 16>;
-            layers = <2>;
-        };
     };
 
     keymap {
@@ -72,10 +53,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y           &kp U  &kp I         &kp O    &kp P     &kp LEFT_BRACKET
-&kp TAB           &kp A  &kp S  &kp D             &kp F  &kp G        &kp H           &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N           &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ENTER
-                                &kp LEFT_COMMAND  &mo 1  &kp SPACE    &kp LEFT_SHIFT  &mo 2  &kp LEFT_ALT
+&kp ESCAPE       &kp Q  &kp W  &kp E             &kp R  &kp T                     &kp Y                    &kp U  &kp I         &kp O    &kp P     &kp LEFT_BRACKET
+&kp TAB          &kp A  &kp S  &kp D             &kp F  &kp G                     &kp H                    &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp RIGHT_SHIFT  &kp Z  &kp X  &kp C             &kp V  &kp B                     &kp N                    &kp M  &kp COMMA     &kp DOT  &kp FSLH  &mt RIGHT_ALT RIGHT_BRACKET
+                               &kp LEFT_CONTROL  &mo 1  &mt LEFT_COMMAND SPACE    &mt RIGHT_COMMAND ENTER  &mo 2  &kp LEFT_ALT
             >;
         };
 
@@ -87,10 +68,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp LC(LG(Q))     &kp N1             &kp N2           &kp N3          &kp N4            &kp N5        &kp N6          &kp N7    &kp N8        &kp N9     &kp N0  &kp BSPC
-&kp K_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp LEFT        &kp DOWN  &kp UP        &kp RIGHT  &trans  &trans
-&kp LEFT_CONTROL  &trans             &trans           &trans          &trans            &trans        &trans          &trans    &trans        &trans     &trans  &kp ENTER
-                                                      &kp LGUI        &trans            &kp SPACE     &kp LEFT_SHIFT  &trans    &kp LEFT_ALT
+&kp LC(LG(Q))  &kp N1             &kp N2           &kp N3            &kp N4            &kp N5        &kp N6    &kp N7    &kp N8        &kp N9     &kp N0  &kp BSPC
+&kp K_MUTE     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREVIOUS    &kp C_PLAY_PAUSE  &kp C_NEXT    &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT  &trans  &trans
+&trans         &trans             &trans           &trans            &trans            &trans        &trans    &trans    &trans        &trans     &trans  &kp RIGHT_ALT
+                                                   &kp LEFT_CONTROL  &trans            &trans        &trans    &trans    &kp LEFT_ALT
             >;
         };
 
@@ -102,19 +83,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE         &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET       &kp AMPS   &kp ASTRK     &kp LPAR  &kp RPAR  &kp BSPC
-&kp CAPSLOCK      &kp F1    &kp F2  &kp F3    &kp F4    &kp F5       &kp MINUS       &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LEFT_CONTROL  &kp F6    &kp F7  &kp F8    &kp F9    &kp F10      &kp UNDER       &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp ENTER
-                                    &kp LGUI  &trans    &kp SPACE    &kp LEFT_SHIFT  &trans     &kp LEFT_ALT
+&kp TILDE     &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR  &kp RPAR  &kp BSPC
+&kp CAPSLOCK  &trans    &trans  &trans    &trans    &kp PAGE_UP      &kp MINUS  &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
+&trans        &trans    &trans  &trans    &trans    &kp PAGE_DOWN    &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp ENTER
+                                &kp LGUI  &trans    &trans           &trans     &trans     &kp LEFT_ALT
             >;
         };
 
-        layer_3 {
+        fbtn_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6     &trans  &kp DELETE  &kp RALT  &kp RSHFT  &kp RCTRL  &trans
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &trans  &trans      &trans    &trans     &trans     &trans
+&trans  &trans  &trans  &trans   &trans   &trans     &trans  &trans      &trans    &trans     &trans     &trans
+                        &trans   &trans   &trans     &trans  &trans      &trans
             >;
         };
     };
