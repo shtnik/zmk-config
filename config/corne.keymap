@@ -102,10 +102,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &ext_power EP_TOG    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans               &trans  &trans  &trans
+&soft_off  &trans  &trans  &trans  &trans  &ext_power EP_TOG    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans               &trans  &trans  &trans
             >;
         };
     };
