@@ -20,8 +20,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: corne_left
+    shield: corne_left ssd1306_128_shield
   - board: nice_nano_v2
-    shield: corne_right
+    shield: corne_right ssd1306_128_shield
   - board: nice_nano_v2
     shield: settings_reset
