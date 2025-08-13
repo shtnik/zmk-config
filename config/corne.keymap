@@ -14,32 +14,72 @@
 
         lpair_comb {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <4 3>;
+            key-positions = <4 5>;
         };
 
         rpair_comb {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <7 8>;
+            key-positions = <7 6>;
         };
 
         lbkt_comb {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <16 15>;
+            key-positions = <16 17>;
         };
 
         rbkt_comb {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <19 20>;
+            key-positions = <19 18>;
         };
 
         lbrc_comb {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <28 27>;
+            key-positions = <28 29>;
         };
 
         rbrc_comb {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <31 32>;
+            key-positions = <31 30>;
+        };
+
+        cmb_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 7>;
+        };
+
+        cmd_delete {
+            bindings = <&kp DELETE>;
+            key-positions = <8 9>;
+        };
+    };
+
+    behaviors {
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
+            flavor = "balanced";
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 38 37 36>;
+            flavor = "balanced";
         };
     };
 
@@ -54,10 +94,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE       &kp Q  &kp W  &kp E             &kp R  &kp T                     &kp Y                    &kp U          &kp I      &kp O    &kp P     &lt 3 LEFT_BRACKET
-&kp TAB          &kp A  &kp S  &kp D             &kp F  &kp G                     &kp H                    &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
-&kp RIGHT_SHIFT  &kp Z  &kp X  &kp C             &kp V  &kp B                     &kp N                    &kp M          &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_ALT RIGHT_BRACKET
-                               &kp LEFT_CONTROL  &mo 1  &mt LEFT_COMMAND SPACE    &mt RIGHT_COMMAND ENTER  &kp BACKSPACE  &mo 2
+&kp ESCAPE       &kp Q                &kp W            &kp E                &kp R              &kp T                     &kp Y                    &kp U               &kp I                 &kp O             &kp P                    &lt 3 LEFT_BRACKET
+&kp TAB          &hml A LEFT_COMMAND  &hml S LEFT_ALT  &hml D LEFT_CONTROL  &hml F LEFT_SHIFT  &kp G                     &kp H                    &hmr J RIGHT_SHIFT  &hmr K RIGHT_CONTROL  &hmr L RIGHT_ALT  &hmr SEMI RIGHT_COMMAND  &kp SQT
+&kp RIGHT_SHIFT  &kp Z                &kp X            &kp C                &kp V              &kp B                     &kp N                    &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &mt RIGHT_ALT RIGHT_BRACKET
+                                                       &kp LEFT_CONTROL     &mo 1              &mt LEFT_COMMAND SPACE    &mt RIGHT_COMMAND ENTER  &kp BACKSPACE       &mo 2
             >;
         };
 
