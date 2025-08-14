@@ -51,6 +51,16 @@
             bindings = <&kp DELETE>;
             key-positions = <8 9>;
         };
+
+        cmb_pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <19 20>;
+        };
+
+        cmb_backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <21 22>;
+        };
     };
 
     behaviors {
