@@ -96,6 +96,16 @@
             bindings = <&kp EQUAL>;
             key-positions = <4 3>;
         };
+
+        cmd_dolar {
+            bindings = <&kp DOLLAR>;
+            key-positions = <8 19>;
+        };
+
+        cmb_hash {
+            bindings = <&kp HASH>;
+            key-positions = <3 16>;
+        };
     };
 
     behaviors {
