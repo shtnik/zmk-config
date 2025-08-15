@@ -78,7 +78,7 @@
         };
 
         cmd_uderscore {
-            bindings = <&none>;
+            bindings = <&kp UNDERSCORE>;
             key-positions = <32 33>;
         };
 
