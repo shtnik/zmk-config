@@ -64,7 +64,7 @@
 
         cmd_minus {
             bindings = <&kp MINUS>;
-            key-positions = <31 30>;
+            key-positions = <31 32>;
         };
 
         cmd_uderscore {
@@ -74,7 +74,7 @@
 
         cmb_plus {
             bindings = <&kp PLUS>;
-            key-positions = <28 29>;
+            key-positions = <28 27>;
         };
 
         cmb_asterisk {
