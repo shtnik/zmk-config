@@ -161,6 +161,7 @@
 
         default_layer {
             display-name = "Base";
+
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -171,12 +172,13 @@
 &kp ESCAPE  &kp Q              &kp W                &kp E             &kp R                &kp T        &kp Y      &kp U                 &kp I             &kp O                 &kp P                  &lt 3 LEFT_BRACKET
 &kp TAB     &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D   &hml LEFT_COMMAND F  &kp G        &kp H      &hmr RIGHT_COMMAND J  &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_SHIFT SEMI  &kp SQT
 &shft_caps  &kp Z              &kp X                &kp C             &kp V                &kp B        &kp N      &kp M                 &kp COMMA         &kp DOT               &kp FSLH               &mt RIGHT_ALT RIGHT_BRACKET
-                                                    &kp LEFT_CONTROL  &mo 1                &kp SPACE    &kp ENTER  &kp BACKSPACE         &mo 2
+                                                    &kp LEFT_CONTROL  &mo 1                &kp SPACE    &kp ENTER  &mo 2                 &kp BACKSPACE
             >;
         };
 
         lower_layer {
             display-name = "Lower";
+
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -193,6 +195,7 @@
 
         raise_layer {
             display-name = "Raise";
+
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
