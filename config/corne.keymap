@@ -113,9 +113,14 @@
             key-positions = <7 8>;
         };
 
-        cmd {
-            bindings = <&kp AT>;
+        ampersand_cmb {
+            bindings = <&kp AMPERSAND>;
             key-positions = <8 9>;
+        };
+
+        at_cmb {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <3 2>;
         };
     };
 
