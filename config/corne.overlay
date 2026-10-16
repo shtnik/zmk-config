@@ -1,0 +1,5 @@
+// Applied to both corne_left and corne_right.
+// Each half: 6 underglow + 21 per-key LEDs on the same WS2812 data line.
+&led_strip {
+    chain-length = <27>;
+};
